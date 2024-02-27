@@ -182,6 +182,56 @@ function ourDoctors() {
             </div>';
     }
 }
+// <!-- testimonial section -->
+function testimonialVari() {
+  $boxs =[
+  ['name' => 'Morijorch',
+   'title' => 'Default model text',
+   'description' => 'editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
+  ],
+  ['name' => 'Rochak',
+   'title' => 'Default model text',
+   'description' => 'Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy.'
+  ],
+  ['name' => 'Brad Johns',
+   'title' => 'Default model text',
+   'description' => 'Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
+  ],
+  
+  ];
+  
+  for ($n = 0; $n < 3; $n++){
+
+                              echo ' <div class="carousel-item' . ($n === 0 ? ' active' : '') . '">
+                                       <div class="box">
+                                       <div class="client_info">
+                                         <div class="client_name">
+                                           <h5>
+                                             '.$boxs[$n]['name'].'
+                                           </h5>
+                                           <h6>
+                                             '.$boxs[$n]['title'].'
+                                           </h6>
+                                         </div>
+                                         <i class="fa fa-quote-left" aria-hidden="true"></i>
+                                       </div>
+                                       <p>
+                                       '.$boxs[$n]['description'].'
+                                       </p>
+                                     </div>
+                                     </div>';
+                              
+                                    }
+    
+  
+  
+  }
+                              
+                              
+
+
+
+
 
 
 
