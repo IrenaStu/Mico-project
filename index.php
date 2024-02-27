@@ -389,18 +389,18 @@
       <div class="row">
         <div class="col-md-7">
           <div class="form_container">
-            <form action="">
+            <form action = "page-two.php" method = "POST" >
               <div>
-                <input type="text" placeholder="Full Name" />
+                <input id = "fullname"  name = "fullname" type="text" placeholder="Full Name" required >
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input id = "email"  name = "email" type="email" placeholder="Email" required >
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input id = "phonenumber"  name = "phonenumber" type="number" placeholder="Phone Number" required >
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input id = "message"  name = "message" type="text" class="message-box" placeholder="Message" required >
               </div>
               <div class="btn_box">
                 <button>
