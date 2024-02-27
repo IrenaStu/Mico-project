@@ -69,7 +69,7 @@
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
               <img src="images/logo.png" alt="">
             </a>
 
@@ -82,7 +82,7 @@
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
                   <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="about.html"> About</a>
@@ -150,7 +150,7 @@
                       </span>
                     </h1>
                     <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less pirveliof letters, as opposed to
                     </p>
                     <a href="">
                       Contact Us
@@ -182,7 +182,7 @@
                       </span>
                     </h1>
                     <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less pirveliof letters, as opposed to
                     </p>
                     <a href="">
                       Contact Us
@@ -214,7 +214,7 @@
                       </span>
                     </h1>
                     <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less pirveliof letters, as opposed to
                     </p>
                     <a href="">
                       Contact Us
@@ -248,50 +248,58 @@
 
 
   <!-- book section -->
+  
 
   <section class="book_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col">
-          <form>
+          <form action = "page.php" method = "POST" >
+          
+  
+
+    
+
+    
+
             <h4>
               BOOK <span>APPOINTMENT</span>
             </h4>
             <div class="form-row ">
               <div class="form-group col-lg-4">
-                <label for="inputPatientName">Patient Name </label>
-                <input type="text" class="form-control" id="inputPatientName" placeholder="">
+              <label for="inputPatientName">Patient Name</label>
+              <input type="text" class="form-control" name="inputPatientName" id="inputPatientName" placeholder="Patient Name" required>
               </div>
               <div class="form-group col-lg-4">
-                <label for="inputDoctorName">Doctor's Name</label>
-                <select name="" class="form-control wide" id="inputDoctorName">
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
+              <label for="inputDoctorName">Doctor's Name</label>
+                <select name="inputDoctorName" class="form-control wide" id="inputDoctorName" required>
+                    <option value="Dr. Morco">Dr. Morco</option>
+                    <option value="Dr. Hennry">Dr. Hennry</option>
+                    <option value="Dr. Jenni">Dr. Jenni</option>
                 </select>
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDepartmentName">Department's Name</label>
-                <select name="" class="form-control wide" id="inputDepartmentName">
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
-                  <option value="Normal distribution ">Normal distribution </option>
+                <select name="inputDepartmentName" class="form-control wide" id="inputDepartmentName" required>
+                  <option value="First">First</option>
+                  <option value="Second">Second</option>
+                  <option value="Third">Third</option>
                 </select>
               </div>
             </div>
             <div class="form-row ">
               <div class="form-group col-lg-4">
                 <label for="inputPhone">Phone Number</label>
-                <input type="number" class="form-control" id="inputPhone" placeholder="XXXXXXXXXX">
+                <input type="number" class="form-control" name="inputPhone" id="inputPhone" placeholder="XXXXXXXXXX" required>
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputSymptoms">Symptoms</label>
-                <input type="text" class="form-control" id="inputSymptoms" placeholder="">
+                <input type="text" class="form-control" name="inputSymptoms" id="inputSymptoms" placeholder="Symptoms" required>
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDate">Choose Date </label>
-                <div class="input-group date" id="inputDate" data-date-format="mm-dd-yyyy">
-                  <input type="text" class="form-control" readonly>
+                <div class="input-group date" name="inputDate" id="inputDate" data-date-format="mm-dd-yyyy" required>
+                  <input type="text" class="form-control" name="inputDate" id="inputDate"  readonly required>
                   <span class="input-group-addon date_icon">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                   </span>
@@ -329,7 +337,7 @@
               </h2>
             </div>
             <p>
-              has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
+              has a more-or-less pirveliof letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less pirveliof letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
             </p>
             <a href="">
               Read More
@@ -729,7 +737,7 @@
                 Useful link
               </h5>
               <div class="info_links_menu">
-                <a class="active" href="index.html">
+                <a class="active" href="index.php">
                   Home
                 </a>
                 <a href="about.html">
