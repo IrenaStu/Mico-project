@@ -273,17 +273,17 @@
               <div class="form-group col-lg-4">
               <label for="inputDoctorName">Doctor's Name</label>
                 <select name="inputDoctorName" class="form-control wide" id="inputDoctorName" required>
-                    <option value="eqimi antona">eqimi antona</option>
-                    <option value="cudi kaci">cudi kaci</option>
-                    <option value="kai kaci">kai kaci</option>
+                    <option value="Dr. Morco">Dr. Morco</option>
+                    <option value="Dr. Hennry">Dr. Hennry</option>
+                    <option value="Dr. Jenni">Dr. Jenni</option>
                 </select>
               </div>
               <div class="form-group col-lg-4">
                 <label for="inputDepartmentName">Department's Name</label>
                 <select name="inputDepartmentName" class="form-control wide" id="inputDepartmentName" required>
-                  <option value="pirveli">pirveli</option>
-                  <option value="meore">meore</option>
-                  <option value="mesame">mesame</option>
+                  <option value="First">First</option>
+                  <option value="Second">Second</option>
+                  <option value="Third">Third</option>
                 </select>
               </div>
             </div>
