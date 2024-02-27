@@ -1129,4 +1129,35 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.pagemain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00c6a9;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+ 
+}
+.pageless{
+  color: #ffffff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+  text-align: left;
+ 
+}
+.appointment{
+  color: chartreuse;
+  
+  font-size: 40px;
+  
+}
+
+
 /*# sourceMappingURL=style.css.map */
