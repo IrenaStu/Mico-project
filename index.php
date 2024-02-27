@@ -13,7 +13,7 @@
   <meta name="author" content="" />
 
   <title>Mico</title>
-
+<?php require "index2.php" ?>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -132,104 +132,7 @@
         <img src="images/dots.png" alt="">
       </div>
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <div class="play_btn">
-                      <button>
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                    <h1>
-                      Mico <br>
-                      <span>
-                        Hospital
-                      </span>
-                    </h1>
-                    <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                    </p>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <div class="play_btn">
-                      <button>
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                    <h1>
-                      Mico <br>
-                      <span>
-                        Hospital
-                      </span>
-                    </h1>
-                    <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                    </p>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <div class="play_btn">
-                      <button>
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                      </button>
-                    </div>
-                    <h1>
-                      Mico <br>
-                      <span>
-                        Hospital
-                      </span>
-                    </h1>
-                    <p>
-                      when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
-                    </p>
-                    <a href="">
-                      Contact Us
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="img-box">
-                    <img src="images/slider-img.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <?php echo sliderSection(); ?>
         <div class="carousel_btn-box">
           <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
             <img src="images/prev.png" alt="">
@@ -356,77 +259,8 @@
         </h2>
       </div>
       <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t1.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Nephrologist Care
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t2.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Eye Care
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t3.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Pediatrician Clinic
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/t4.png" alt="">
-            </div>
-            <div class="detail-box">
-              <h4>
-                Parental Care
-              </h4>
-              <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly e sure there isn't anything
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
+       <?php echo hospitalTreatment(); ?>
+          
         </div>
       </div>
     </div>
@@ -445,93 +279,7 @@
       </div>
       <div class="carousel-wrap ">
         <div class="owl-carousel team_carousel">
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/team1.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Hennry
-                </h5>
-                <h6>
-                  MBBS
-                </h6>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/team2.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Jenni
-                </h5>
-                <h6>
-                  MBBS
-                </h6>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="box">
-              <div class="img-box">
-                <img src="images/team3.jpg" alt="" />
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Morco
-                </h5>
-                <h6>
-                  MBBS
-                </h6>
-                <div class="social_box">
-                  <a href="">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                  </a>
-                  <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <?php echo ourDoctors(); ?>
         </div>
       </div>
     </div>
