@@ -36,27 +36,29 @@ function generateHeader(){
 
     $infos = [
         'call' => '+01 123455678990',
+        'call_link' => 'tel:+12345678990',
         'email' => 'demo@gmail.com',
-        'location' => 'Location',
+        'email_link' => 'mailto:demo@gmail.com',
+        'location' => 'https://www.google.com/maps/place/Mico+Hospital/@19.989798,73.7352341,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddec8145a77473:0xa4a7e9777c699000!8m2!3d19.989798!4d73.737809!16s%2Fg%2F1xg5r3xz?entry=ttu target="_blank" rel="noopener noreferrer"' ,
     ];
    
     echo '<header class="header_section">
     <div class="header_top">
       <div class="container">
         <div class="contact_nav">
-          <a href="">
+          <a href="' . $infos['call_link'].'">
             <i class="fa fa-phone" aria-hidden="true"></i>
             <span>
             Call: ' . $infos['call'].'
             </span>
           </a>
-          <a href="">
+          <a href="' . $infos['email_link'].'">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span>
             Email: ' . $infos['email'].'
             </span>
           </a>
-          <a href="">
+          <a href="'. $infos['location'].'">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <span>
               Location
