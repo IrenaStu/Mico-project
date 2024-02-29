@@ -171,7 +171,7 @@
           </a>
         </div>
         <div class="info_form">
-          <form action="">
+          <form action=" ">
             <input type="email" placeholder="Your email">
             <button>
               Subscribe
