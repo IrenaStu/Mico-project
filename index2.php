@@ -51,6 +51,51 @@ function sliderSection() {
 }
 //   end of first slider //
 
+
+// <!-- about section -->
+
+function aboutSection() {
+  
+  $about = [
+    "img" => "images/about-img.jpg",
+    "title" => "About",
+    "titleSpan" => "Hospital",
+    "body" => "has a more-or-less pirveliof letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less pirveliof letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors",
+    "link" => "#",
+    "linkName" => "Read More",
+  ];
+
+  for ($i=0; $i<1; $i++){
+    echo '   <div class="container  ">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="img-box">
+          <img src="'. $about['img']  .'" alt="">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="detail-box">
+          <div class="heading_container">
+            <h2>
+            '. $about['title']  .' <span>'. $about['titleSpan']  .'l</span>
+            </h2>
+          </div>
+          <p>
+          '. $about['body']  .'
+          </p>
+          <a href="'. $about['link']  .' ">
+          '. $about['linkName']  .'
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>  ';
+  }
+}
+// <!-- end about section -->
+
+
+
 // <!--  treatment section -->
   
 function hospitalTreatment() {
