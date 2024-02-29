@@ -2,11 +2,11 @@
 <?php
 $menuItems = array(
     "Home" => "index.php",
-    "About" => "about.html",
-    "Treatment" => "treatment.html",
-    "Doctors" => "doctor.html",
-    "Testimonial" => "testimonial.html",
-    "Contact Us" => "contact.html",
+    "About" => "about.php",
+    "Treatment" => "treatment.php",
+    "Doctors" => "doctor.php",
+    "Testimonial" => "testimonial.php",
+    "Contact Us" => "contact.php",
 );
 
 $currentPage = "Home";

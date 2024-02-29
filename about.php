@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
- <!-- Basic -->
- <meta charset="utf-8" />
+  <!-- Basic -->
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,6 +16,7 @@
   <?php require "index2.php" ?>
  <?php require "footer.php" ?>
  <?php require "header.php" ?>
+
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -41,33 +38,51 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
-<body>
-    
-     <!-- header section strats -->
-     <?php echo generateHeader(); ?>
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <?php echo generateHeader(); ?>
     <!-- end header section -->
-
-    <div class="container"> 
-        <div class="pagemain">
-            <div class="pageless">
-
-            <?php
-                    
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    
-                        if (!empty($_POST["email"])) {
-                            $email = $_POST["email"];
-                    
-                
-                            echo '<h1 class = "appointment"> You subscribed successfully!  </h1>';
-                        } else {
-                            echo '<h1 class = "appointment"> Please enter your email </h1>';
-                        }
-                    }
-                ?>
-                    
+  </div>
 
 
-            </div>
-         </div>
-    </div>
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+  <?php aboutSection(); ?>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- info section -->
+  
+  <?php displayfooter(); ?>
+  
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>

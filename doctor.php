@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
- <!-- Basic -->
- <meta charset="utf-8" />
+  <!-- Basic -->
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -40,64 +37,59 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
-<body>
-    
-     <!-- header section strats -->
-     <?php echo generateHeader(); ?>
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <?php echo generateHeader(); ?>
     <!-- end header section -->
+  </div>
 
+  <!-- team section -->
+
+  <section class="team_section layout_padding">
     <div class="container">
-        <div class="messageinfo">
-        <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        
-                        $fullName = $_POST["fullname"];
-                        $email = $_POST["email"];
-                        $Number = (int) $_POST["phonenumber"];
-                        
-                        
-
-                        
-                        echo "Name: " . htmlspecialchars($fullName) . "<br>";
-                        echo "Email: " . htmlspecialchars($email) . "<br>";
-                        echo "Phone number: " . htmlspecialchars($Number) . "<br>";
-                        
-
-                    } else {
-                        echo "Form not submitted.";
-                    }
-                ?>
+      <div class="heading_container heading_center">
+        <h2>
+          Our <span>Doctors</span>
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel team_carousel">
+        <?php echo ourDoctors(); ?>
         </div>
-        <div class="pagemain">
-            <div class="pageless">
-            
-                <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        
-                        
-                        $message= $_POST["message"];
-                        
-
-                        
-                        
-                        echo "" . htmlspecialchars( $message) . "<br>";
-
-                    } else {
-                        echo "Form not submitted.";
-                    }
-                ?>
-            </div>
-            
-          
-        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- info section -->
-   
+  <!-- end team section -->
+
+
+  <!-- info section -->
+
   <!-- end info_section -->
   <?php displayfooter(); ?>
 
   <!-- footer section -->
  
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
 </body>
+
 </html>

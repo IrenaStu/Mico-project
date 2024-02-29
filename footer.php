@@ -60,11 +60,11 @@ function adress() {
     echo '<h5>Usful link</h5><br>';
     $menuLinks = [ 
         ['link' => 'index.php', 'Name' => 'Home'],
-        ['link' => 'about.html', 'Name' => 'About'],
-        ['link' => 'treatment.html', 'Name' => 'Treatment'],
-        ['link' => 'doctor.html', 'Name' => 'Doctors'],
-        ['link' => 'Testimonial', 'Name' => 'Testimonial'],
-        ['link' => 'contact.html', 'Name' => 'Contact us'],
+        ['link' => 'about.php', 'Name' => 'About'],
+        ['link' => 'treatment.php', 'Name' => 'Treatment'],
+        ['link' => 'doctor.php', 'Name' => 'Doctors'],
+        ['link' => 'Testimonial.php', 'Name' => 'Testimonial'],
+        ['link' => 'contact.php', 'Name' => 'Contact us'],
     ]; 
 
     foreach ($menuLinks as $index => $menuLink) {
