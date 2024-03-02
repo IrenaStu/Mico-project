@@ -48,8 +48,8 @@
     <!-- end header section -->
 
     <div class="container"> 
-        <div class="pagemain">
-            <div class="pageless">
+        
+            
 
             <?php
                     
@@ -68,6 +68,6 @@
                     
 
 
-            </div>
-         </div>
+            
+        
     </div>

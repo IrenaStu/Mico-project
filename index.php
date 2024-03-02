@@ -50,7 +50,7 @@
 </div>
 
     <!-- slider section -->
-    <?php  sectionContent(); ?>
+    <?php  sliderContent(); ?>
     <!-- end slider section -->
   
 

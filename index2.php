@@ -50,7 +50,7 @@ function sliderSection() {
     }
 }
 
-function sectionContent(){
+function sliderContent(){
    
   echo '  <section class="slider_section ">
   <div class="dot_design">
@@ -366,7 +366,7 @@ function sectionTestimonial() {
 
 // <!-- client section -->       
                             
-
+// <!-- book section -->
 
 function mainAppointment(){
 
@@ -515,7 +515,8 @@ function mainAppointment(){
   </div>
   </section>';
 }
-
+ 
+// <!-- book section -->
 
 
 
