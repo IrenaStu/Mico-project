@@ -49,6 +49,33 @@ function sliderSection() {
      
     }
 }
+
+function sectionContent(){
+   
+  echo '  <section class="slider_section ">
+  <div class="dot_design">
+    <img src="images/dots.png" alt="">
+  </div>
+  <div id="customCarousel1" class="carousel slide" data-ride="carousel"> ';
+     echo sliderSection();
+     echo ' <div class="carousel_btn-box">
+      <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+        <img src="images/prev.png" alt="">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+        <img src="images/next.png" alt="">
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+</section> ';
+}
+
+
+
+
 //   end of first slider //
 
 
@@ -152,6 +179,28 @@ function hospitalTreatment() {
       </div> ';
     }
 }
+
+function sectionTreatment() {
+  echo '   <section class="treatment_section layout_padding">
+  <div class="side_img">
+    <img src="images/treatment-side-img.jpg" alt="">
+  </div>
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Hospital <span>Treatment</span>
+      </h2>
+    </div>
+    <div class="row"> ';
+      echo hospitalTreatment(); 
+        
+     echo ' </div>
+    </div>
+  </div>
+</section> ';
+}
+
+
 // <!-- end treatment section -->
 
 // <!-- team section -->
@@ -227,60 +276,116 @@ function ourDoctors() {
             </div>';
     }
 }
-// <!-- testimonial section -->
+ 
+function doctorsTeam() {
+
+  echo '  <section class="team_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Our <span>Doctors</span>
+      </h2>
+    </div>
+    <div class="carousel-wrap ">
+      <div class="owl-carousel team_carousel"> ';
+
+   echo ourDoctors(); 
+
+    echo ' </div>
+        </div>
+      </div>
+    </section> ';
+}
+
+// <!-- end team section -->
+
+//  <!-- client section -->
 function testimonialVari() {
-  $boxs =[
-  ['name' => 'Morijorch',
-   'title' => 'Default model text',
-   'description' => 'editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
-  ],
-  ['name' => 'Rochak',
-   'title' => 'Default model text',
-   'description' => 'Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy.'
-  ],
-  ['name' => 'Brad Johns',
-   'title' => 'Default model text',
-   'description' => 'Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
-  ],
-  
+  $boxs = [
+    [
+      'name' => 'Morijorch',
+      'title' => 'Default model text',
+      'description' => 'Editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
+    ],
+    [
+      'name' => 'Rochak',
+      'title' => 'Default model text',
+      'description' => 'Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy.'
+    ],
+    [
+      'name' => 'Brad Johns',
+      'title' => 'Default model text',
+      'description' => 'Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
+    ],
   ];
   
-  for ($n = 0; $n < 3; $n++){
+  for ($n = 0; $n < 3; $n++) {
+    echo '<div class="carousel-item' . ($n === 0 ? ' active' : '') . '">
+            <div class="box">
+              <div class="client_info">
+                <div class="client_name">
+                  <h5>' . $boxs[$n]['name'] . '</h5>
+                  <h6>' . $boxs[$n]['title'] . '</h6>
+                </div>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+              <p>' . $boxs[$n]['description'] . '</p>
+            </div>
+          </div>';
+  }
+}  
 
-                              echo ' <div class="carousel-item' . ($n === 0 ? ' active' : '') . '">
-                                       <div class="box">
-                                       <div class="client_info">
-                                         <div class="client_name">
-                                           <h5>
-                                             '.$boxs[$n]['name'].'
-                                           </h5>
-                                           <h6>
-                                             '.$boxs[$n]['title'].'
-                                           </h6>
-                                         </div>
-                                         <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                       </div>
-                                       <p>
-                                       '.$boxs[$n]['description'].'
-                                       </p>
-                                     </div>
-                                     </div>';
+function sectionTestimonial() {
+  echo '  <section class="client_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>
+        <span>Testimonial</span>
+      </h2>
+    </div>
+  </div>
+  <div class="container px-0">
+    <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
+      <div class="carousel-inner"> ';
+          testimonialVari() ; 
+    echo '  </div> 
+      <div class="carousel_btn-box">
+        <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>';
+}
+
+               
                               
-                                    };
-    
+
+
+
+
+
+
+
+
+
+
+   function mainAppointment(){
   
+function docappointmentInputs(){
+  $docopts = [
+    ["drname" => "Dr. Morco"],
+    ["drname" => "Dr. Hennry"],
+    ["drname" => "Dr. Jenni"],
+  ];
   
-  };
-  function testimonialButton(){
-    $first =[
-      ['bttn' => 'carousel-control-prev',
-      'dirr' => 'fa fa-angle-left',
-      'slide' => 'prev',
-      'txt' => 'Previous'],
-      ['bttn' => 'carousel-control-next',
-      'dirr' => 'fa fa-angle-right',
-      'slide' => 'next',
-      'txt' => 'Next'],
+
       
       
       
@@ -372,17 +477,149 @@ function testimonialVari() {
     </div>
   </section>';
 
+  foreach($docopts as $docopt){
+    echo '<option value="'.$docopt["drname"].'">'.$docopt["drname"].'</option>';
   }
-                              
-                              
+}
+
+function depappointmentInputs(){
+  $depopts = [
+    ["dpname" => "First"],
+    ["dpname" => "Second"],
+    ["dpname" => "Third"],
+  ];
+  
+  foreach($depopts as $depopt){
+    echo '<option value="'.$depopt["dpname"].'">'.$depopt["dpname"].'</option>';
+  }
+}
+
+function optInputs() {
+  $inpus = [
+    [
+      'for' => 'inputDoctorName',
+      'text' => "Doctor's Name",
+      'name' => 'inputDoctorName',
+      'id' => 'inputDoctorName',
+      'func' => 'docappointmentInputs',
+    ],
+    [
+      'for' => 'inputDepartmentName',
+      'text' => "Department's Name",
+      'name' => 'inputDepartmentName',
+      'id' => 'inputDepartmentName',
+      'func' => 'depappointmentInputs',
+    ],
+  ];
+
+  foreach ($inpus as $inpu) {
+    echo '<div class="form-group col-lg-4">
+    <label for="' . $inpu['for'] . '">' . $inpu['text'] . '</label>
+    <select name="' . $inpu['name'] . '" class="form-control wide" id="' . $inpu['id'] . '" required>';
+    
+    $functionName = $inpu['func'];
+    $functionName(); 
+
+    echo '</select></div>';
+  }
+};
+function ordInputs(){
+  $ins = [
+    [
+      'for' => 'inputPatientName',
+      'text' => 'Patient Name',
+      'type' => 'text',
+      'name' => 'inputPatientName',
+      'id' => 'inputPatientName',
+      'placeholder' => 'Patient Name',
+    ],
+    [
+      'for' => 'inputPhone',
+      'text' => "Phone Number",
+      'type' => 'number',
+      'name' => 'inputPhone',
+      'id' => 'inputPhone',
+      'placeholder' => 'XXXXXXXXXX',
+    ],
+    [
+      'for' => 'inputSymptoms',
+      'text' => "Symptoms",
+      'type' => 'text',
+      'name' => 'inputSymptoms',
+      'id' => 'inputSymptoms',
+      'placeholder' => 'Symptoms',
+    ],
+    
+  ];
+    foreach($ins as $index => $in){
+      echo '<div class="form-group col-lg-4">
+      <label for="' . $in['for'] . '">' . $in['text'] . '</label>
+      <input type="' . $in['type'] . '" class="form-control" name="' . $in['name'] . '" id="' . $in['id'] . '" placeholder="' . $in['placeholder'] . '" required>
+      <!-- Additional content for the third div -->
+    </div>';
+    if ($index == 0){
+      optInputs();
+    }
+    }
+  
+}
+function dataInputs(){
+  $datainps =[
+    [
+      'for' => 'inputDate',
+      'text' => "Choose Date",
+      'type' => 'text',
+      'name' => 'inputDate',
+      'id' => 'inputDate',
+      'format' => 'mm-dd-yyyy',
+
+    ],
+
+  ];
+  foreach($datainps as $datainp){
+    echo '<div class="form-group col-lg-4">
+    <label for="' . $datainp['for'] . '">Choose Date </label>
+    <div class="input-group date" name="' . $datainp['name'] . '" id="' . $datainp['id'] . '" data-date-format="' . $datainp['format'] . '" required>
+      <input type="' . $datainp['type'] . '" class="form-control" name="' . $datainp['name'] . '" id="' . $datainp['id'] . '"  readonly required>
+      <span class="input-group-addon date_icon">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>';
+  };
+};
+
+
+echo '<section class="book_section layout_padding">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form action = "page.php" method = "POST" >
+        <h4>
+          BOOK <span>APPOINTMENT</span>
+        </h4>
+        <div class="form-row ">';
+          
+        ordInputs();
+        dataInputs();
+        
+        
+        echo '</div>
+        <div class="btn-box">
+          <button type="submit" class="btn ">Submit Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>';
 
 
 
 
 
 
-
-
+  };
 
 ?>
 

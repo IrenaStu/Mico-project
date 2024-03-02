@@ -50,24 +50,9 @@
 
 
   <!-- client section -->
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          <span>Testimonial</span>
-        </h2>
-      </div>
-    </div>
-    <div class="container px-0">
-      <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-        <?php testimonialVari() ?>
-        <div class="carousel_btn-box">
-        <?php testimonialButton() ?>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+  <?php sectionTestimonial(); ?>
   <!-- end client section -->
 
 

@@ -44,103 +44,23 @@
   <div class="hero_area">
 
     <!-- header section strats -->
-    <?php echo generateHeader(); ?>
+    <?php  generateHeader(); ?>
     
     <!-- end header section -->
-
+</div>
 
     <!-- slider section -->
-    <section class="slider_section ">
-      <div class="dot_design">
-        <img src="images/dots.png" alt="">
-      </div>
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-      <?php echo sliderSection(); ?>
-        <div class="carousel_btn-box">
-          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
-            <img src="images/prev.png" alt="">
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
-            <img src="images/next.png" alt="">
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-
-    </section>
+    <?php  sectionContent(); ?>
     <!-- end slider section -->
-  </div>
+  
 
 
   <!-- book section -->
   
-
-  <section class="book_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <form action = "page.php" method = "POST" >
-            <h4>
-              BOOK <span>APPOINTMENT</span>
-            </h4>
-            <div class="form-row ">
-              <div class="form-group col-lg-4">
-              <label for="inputPatientName">Patient Name</label>
-              <input type="text" class="form-control" name="inputPatientName" id="inputPatientName" placeholder="Patient Name" required>
-              </div>
-              <div class="form-group col-lg-4">
-              <label for="inputDoctorName">Doctor's Name</label>
-                <select name="inputDoctorName" class="form-control wide" id="inputDoctorName" required>
-                    <option value="Dr. Morco">Dr. Morco</option>
-                    <option value="Dr. Hennry">Dr. Hennry</option>
-                    <option value="Dr. Jenni">Dr. Jenni</option>
-                </select>
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputDepartmentName">Department's Name</label>
-                <select name="inputDepartmentName" class="form-control wide" id="inputDepartmentName" required>
-                  <option value="First">First</option>
-                  <option value="Second">Second</option>
-                  <option value="Third">Third</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-row ">
-              <div class="form-group col-lg-4">
-                <label for="inputPhone">Phone Number</label>
-                <input type="number" class="form-control" name="inputPhone" id="inputPhone" placeholder="XXXXXXXXXX" required>
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputSymptoms">Symptoms</label>
-                <input type="text" class="form-control" name="inputSymptoms" id="inputSymptoms" placeholder="Symptoms" required>
-              </div>
-              <div class="form-group col-lg-4">
-                <label for="inputDate">Choose Date </label>
-                <div class="input-group date" name="inputDate" id="inputDate" data-date-format="mm-dd-yyyy" required>
-                  <input type="text" class="form-control" name="inputDate" id="inputDate"  readonly required>
-                  <span class="input-group-addon date_icon">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="btn-box">
-              <button type="submit" class="btn ">Submit Now</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-              
-          
-  
-
-    
-
-            
-
+  <?php
+  mainAppointment();
+  ?>
+                
 
   <!-- end book section -->
 
@@ -156,66 +76,20 @@
 
   <!-- treatment section -->
 
-  <section class="treatment_section layout_padding">
-    <div class="side_img">
-      <img src="images/treatment-side-img.jpg" alt="">
-    </div>
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Hospital <span>Treatment</span>
-        </h2>
-      </div>
-      <div class="row">
-       <?php echo hospitalTreatment(); ?>
-          
-        </div>
-      </div>
-    </div>
-  </section>
+   <?php sectionTreatment(); ?>
 
   <!-- end treatment section -->
 
   <!-- team section -->
 
-  <section class="team_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Our <span>Doctors</span>
-        </h2>
-      </div>
-      <div class="carousel-wrap ">
-        <div class="owl-carousel team_carousel">
-    <?php echo ourDoctors(); ?>
-        </div>
-      </div>
-    </div>
-  </section>
+   <?php doctorsTeam(); ?>
 
   <!-- end team section -->
 
 
   <!-- client section -->
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          <span>Testimonial</span>
-        </h2>
-      </div>
-    </div>
-    <div class="container px-0">
-      <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-          <?php testimonialVari() ?>
-        </div>
-        <div class="carousel_btn-box">
-          <?php testimonialButton() ?>
-        </div>
-      </div>
-    </div>
-  </section>
+
+ <?php sectionTestimonial(); ?>
   <!-- end client section -->
 
   <!-- contact section -->

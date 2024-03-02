@@ -44,7 +44,7 @@
 
   <div class="hero_area">
     <!-- header section strats -->
-    <?php echo generateHeader(); ?>
+    <?php  generateHeader(); ?>
     <!-- end header section -->
   </div>
 

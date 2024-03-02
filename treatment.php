@@ -50,21 +50,7 @@
 
   <!-- treatment section -->
 
-  <section class="treatment_section layout_padding">
-    <div class="side_img">
-      <img src="images/treatment-side-img.jpg" alt="">
-    </div>
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Hospital <span>Treatment</span>
-        </h2>
-      </div>
-      <div class="row">
-      <?php echo hospitalTreatment(); ?>
-      </div>
-    </div>
-  </section>
+  <?php sectionTreatment(); ?>
 
   <!-- end treatment section -->
 
@@ -75,12 +61,7 @@
 
   <!-- footer section -->
   <?php displayfooter(); ?>
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
+   
 
   <!-- footer section -->
 
