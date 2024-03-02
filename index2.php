@@ -617,9 +617,85 @@ echo '<section class="book_section layout_padding">
 
 
 
-
+// Get IN TOUCH SECTION
 
   };
+  function getintouchInputs(){
+    $title = 'Get In Touch';
+    $linkg = 'page-two.php';
+    $btntext = 'SEND';
+    $imgsrc = 'images/contact-img.jpg';
+    $inp =[
+      ['id' => 'fullname',
+      'name' => 'fullname',
+      'type' => 'text',
+      'placeholder' => 'Full Name',
+      ],
+      ['id' => 'email',
+      'name' => 'email',
+      'type' => 'email',
+      'placeholder' => 'Email',
+      ],
+      ['id' => 'phonenumber',
+      'name' => 'phonenumber',
+      'type' => 'number',
+      'placeholder' => 'Phone Number',
+      ],
+      ['id' => 'message',
+      'name' => 'message',
+      'type' => 'text',
+      'placeholder' => 'Message',
+      ],
+    ];
+    echo '<section class="contact_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+        '.$title.'
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="form_container">
+    <form action = "'.$linkg.'" method = "POST" >';
+
+    for ($v = 0; $v < 4; $v++){
+          
+      
+      if ($v < 3){
+        echo '
+        <div>
+        <input id = "'.$inp[$v]['id'].'"  name = "'.$inp[$v]['name'].'" type="'.$inp[$v]['type'].'" placeholder="'.$inp[$v]['placeholder'].'" required >
+      </div>';
+         ;
+      }else {
+       echo  '
+       <div>
+        <input id = "'.$inp[$v]['id'].'"  name = "'.$inp[$v]['name'].'" type="'.$inp[$v]['type'].'" class="message-box" placeholder="'.$inp[$v]['placeholder'].'" required >
+      </div>';
+      };
+     
+
+    };
+    echo '<div class="btn_box">
+    <button>
+    '.$btntext.'
+    </button>
+  </div>
+</form>
+</div>
+        </div>
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="'.$imgsrc.'" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>';
+  };
+  // END GET IN TOUCH SECTION
+  
 
 ?>
 
