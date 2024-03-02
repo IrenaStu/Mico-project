@@ -282,5 +282,160 @@ function testimonialVari() {
 
 
 
+
+  function mainAppointment(){
+
+  
+function docappointmentInputs(){
+  $docopts = [
+    ["drname" => "Dr. Morco"],
+    ["drname" => "Dr. Hennry"],
+    ["drname" => "Dr. Jenni"],
+  ];
+  
+  foreach($docopts as $docopt){
+    echo '<option value="'.$docopt["drname"].'">'.$docopt["drname"].'</option>';
+  }
+}
+
+function depappointmentInputs(){
+  $depopts = [
+    ["dpname" => "First"],
+    ["dpname" => "Second"],
+    ["dpname" => "Third"],
+  ];
+  
+  foreach($depopts as $depopt){
+    echo '<option value="'.$depopt["dpname"].'">'.$depopt["dpname"].'</option>';
+  }
+}
+
+function optInputs() {
+  $inpus = [
+    [
+      'for' => 'inputDoctorName',
+      'text' => "Doctor's Name",
+      'name' => 'inputDoctorName',
+      'id' => 'inputDoctorName',
+      'func' => 'docappointmentInputs',
+    ],
+    [
+      'for' => 'inputDepartmentName',
+      'text' => "Department's Name",
+      'name' => 'inputDepartmentName',
+      'id' => 'inputDepartmentName',
+      'func' => 'depappointmentInputs',
+    ],
+  ];
+
+  foreach ($inpus as $inpu) {
+    echo '<div class="form-group col-lg-4">
+    <label for="' . $inpu['for'] . '">' . $inpu['text'] . '</label>
+    <select name="' . $inpu['name'] . '" class="form-control wide" id="' . $inpu['id'] . '" required>';
+    
+    $functionName = $inpu['func'];
+    $functionName(); 
+
+    echo '</select></div>';
+  }
+};
+function ordInputs(){
+  $ins = [
+    [
+      'for' => 'inputPatientName',
+      'text' => 'Patient Name',
+      'type' => 'text',
+      'name' => 'inputPatientName',
+      'id' => 'inputPatientName',
+      'placeholder' => 'Patient Name',
+    ],
+    [
+      'for' => 'inputPhone',
+      'text' => "Phone Number",
+      'type' => 'number',
+      'name' => 'inputPhone',
+      'id' => 'inputPhone',
+      'placeholder' => 'XXXXXXXXXX',
+    ],
+    [
+      'for' => 'inputSymptoms',
+      'text' => "Symptoms",
+      'type' => 'text',
+      'name' => 'inputSymptoms',
+      'id' => 'inputSymptoms',
+      'placeholder' => 'Symptoms',
+    ],
+    
+  ];
+    foreach($ins as $index => $in){
+      echo '<div class="form-group col-lg-4">
+      <label for="' . $in['for'] . '">' . $in['text'] . '</label>
+      <input type="' . $in['type'] . '" class="form-control" name="' . $in['name'] . '" id="' . $in['id'] . '" placeholder="' . $in['placeholder'] . '" required>
+      <!-- Additional content for the third div -->
+    </div>';
+    if ($index == 0){
+      optInputs();
+    }
+    }
+  
+}
+function dataInputs(){
+  $datainps =[
+    [
+      'for' => 'inputDate',
+      'text' => "Choose Date",
+      'type' => 'text',
+      'name' => 'inputDate',
+      'id' => 'inputDate',
+      'format' => 'mm-dd-yyyy',
+
+    ],
+
+  ];
+  foreach($datainps as $datainp){
+    echo '<div class="form-group col-lg-4">
+    <label for="' . $datainp['for'] . '">Choose Date </label>
+    <div class="input-group date" name="' . $datainp['name'] . '" id="' . $datainp['id'] . '" data-date-format="' . $datainp['format'] . '" required>
+      <input type="' . $datainp['type'] . '" class="form-control" name="' . $datainp['name'] . '" id="' . $datainp['id'] . '"  readonly required>
+      <span class="input-group-addon date_icon">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>';
+  };
+};
+
+
+echo '<section class="book_section layout_padding">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form action = "page.php" method = "POST" >
+        <h4>
+          BOOK <span>APPOINTMENT</span>
+        </h4>
+        <div class="form-row ">';
+          
+        ordInputs();
+        dataInputs();
+        
+        
+        echo '</div>
+        <div class="btn-box">
+          <button type="submit" class="btn ">Submit Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</section>';
+
+
+
+
+
+
+  };
+
 ?>
 
