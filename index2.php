@@ -49,6 +49,33 @@ function sliderSection() {
      
     }
 }
+
+function sectionContent(){
+   
+  echo '  <section class="slider_section ">
+  <div class="dot_design">
+    <img src="images/dots.png" alt="">
+  </div>
+  <div id="customCarousel1" class="carousel slide" data-ride="carousel"> ';
+     echo sliderSection();
+     echo ' <div class="carousel_btn-box">
+      <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+        <img src="images/prev.png" alt="">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+        <img src="images/next.png" alt="">
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+</section> ';
+}
+
+
+
+
 //   end of first slider //
 
 
@@ -152,6 +179,28 @@ function hospitalTreatment() {
       </div> ';
     }
 }
+
+function sectionTreatment() {
+  echo '   <section class="treatment_section layout_padding">
+  <div class="side_img">
+    <img src="images/treatment-side-img.jpg" alt="">
+  </div>
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Hospital <span>Treatment</span>
+      </h2>
+    </div>
+    <div class="row"> ';
+      echo hospitalTreatment(); 
+        
+     echo ' </div>
+    </div>
+  </div>
+</section> ';
+}
+
+
 // <!-- end treatment section -->
 
 // <!-- team section -->
@@ -227,50 +276,94 @@ function ourDoctors() {
             </div>';
     }
 }
-// <!-- testimonial section -->
+ 
+function doctorsTeam() {
+
+  echo '  <section class="team_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Our <span>Doctors</span>
+      </h2>
+    </div>
+    <div class="carousel-wrap ">
+      <div class="owl-carousel team_carousel"> ';
+
+   echo ourDoctors(); 
+
+    echo ' </div>
+        </div>
+      </div>
+    </section> ';
+}
+
+// <!-- end team section -->
+
+//  <!-- client section -->
 function testimonialVari() {
-  $boxs =[
-  ['name' => 'Morijorch',
-   'title' => 'Default model text',
-   'description' => 'editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
-  ],
-  ['name' => 'Rochak',
-   'title' => 'Default model text',
-   'description' => 'Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy.'
-  ],
-  ['name' => 'Brad Johns',
-   'title' => 'Default model text',
-   'description' => 'Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
-  ],
-  
+  $boxs = [
+    [
+      'name' => 'Morijorch',
+      'title' => 'Default model text',
+      'description' => 'Editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
+    ],
+    [
+      'name' => 'Rochak',
+      'title' => 'Default model text',
+      'description' => 'Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy.'
+    ],
+    [
+      'name' => 'Brad Johns',
+      'title' => 'Default model text',
+      'description' => 'Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various'
+    ],
   ];
   
-  for ($n = 0; $n < 3; $n++){
-
-                              echo ' <div class="carousel-item' . ($n === 0 ? ' active' : '') . '">
-                                       <div class="box">
-                                       <div class="client_info">
-                                         <div class="client_name">
-                                           <h5>
-                                             '.$boxs[$n]['name'].'
-                                           </h5>
-                                           <h6>
-                                             '.$boxs[$n]['title'].'
-                                           </h6>
-                                         </div>
-                                         <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                       </div>
-                                       <p>
-                                       '.$boxs[$n]['description'].'
-                                       </p>
-                                     </div>
-                                     </div>';
-                              
-                                    }
-    
-  
-  
+  for ($n = 0; $n < 3; $n++) {
+    echo '<div class="carousel-item' . ($n === 0 ? ' active' : '') . '">
+            <div class="box">
+              <div class="client_info">
+                <div class="client_name">
+                  <h5>' . $boxs[$n]['name'] . '</h5>
+                  <h6>' . $boxs[$n]['title'] . '</h6>
+                </div>
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+              <p>' . $boxs[$n]['description'] . '</p>
+            </div>
+          </div>';
   }
+}  
+
+function sectionTestimonial() {
+  echo '  <section class="client_section layout_padding">
+  <div class="container">
+    <div class="heading_container">
+      <h2>
+        <span>Testimonial</span>
+      </h2>
+    </div>
+  </div>
+  <div class="container px-0">
+    <div id="customCarousel2" class="carousel  carousel-fade" data-ride="carousel">
+      <div class="carousel-inner"> ';
+          testimonialVari() ; 
+    echo '  </div> 
+      <div class="carousel_btn-box">
+        <a class="carousel-control-prev" href="#customCarousel2" role="button" data-slide="prev">
+          <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#customCarousel2" role="button" data-slide="next">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>';
+}
+
                               
                               
 
