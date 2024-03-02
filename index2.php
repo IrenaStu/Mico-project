@@ -364,7 +364,7 @@ function sectionTestimonial() {
 </section>';
 }
 
-                              
+//  <!-- end client section -->                       
                               
 
 
@@ -389,7 +389,7 @@ function docappointmentInputs(){
   foreach($docopts as $docopt){
     echo '<option value="'.$docopt["drname"].'">'.$docopt["drname"].'</option>';
   }
-}
+} 
 
 function depappointmentInputs(){
   $depopts = [
