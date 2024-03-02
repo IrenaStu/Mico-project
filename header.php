@@ -31,40 +31,83 @@ function generateNavbar($menuItems, $currentPage) {
     echo '</ul>';
 };
 
+function generatereg(){
+  $reg = [
+    'log' => 'Login',
+    'log_link' => '#',
+    'sig' => 'Sign Up',
+    'sig_link' => '#',
+    
+    
+  ];
+
+  echo'<a href="' . $reg['log_link'].'">
+  <i class="fa fa-user" aria-hidden="true"></i>
+  <span>
+  ' . $reg['log'].'
+  </span>
+</a>
+<a href="' . $reg['sig_link'].'">
+  <i class="fa fa-user" aria-hidden="true"></i>
+  <span>
+  ' . $reg['sig'].'
+  </span>
+</a>';
+
+};
+function generatesocial(){
+  $infos = [
+    'call' => '+01 123455678990',
+    'call_link' => 'tel:+12345678990',
+    'email' => 'demo@gmail.com',
+    'email_link' => 'mailto:demo@gmail.com',
+    'location' => 'https://www.google.com/maps/place/Mico+Hospital/@19.989798,73.7352341,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddec8145a77473:0xa4a7e9777c699000!8m2!3d19.989798!4d73.737809!16s%2Fg%2F1xg5r3xz?entry=ttu target="_blank" rel="noopener noreferrer"' ,
+];
+
+
+
+
+
+
+
+
+  echo ' <a href="' . $infos['call_link'].'">
+  <i class="fa fa-phone" aria-hidden="true"></i>
+  <span>
+  Call : ' . $infos['call'].'
+  </span>
+</a>
+<a href="' . $infos['email_link'].'">
+  <i class="fa fa-envelope" aria-hidden="true"></i>
+  <span>
+  Email : ' . $infos['email'].'
+  </span>
+</a>
+<a href="'. $infos['location'].'">
+  <i class="fa fa-map-marker" aria-hidden="true"></i>
+  <span>
+    Location
+  </span>
+</a>';
+
+
+};
+
 
 function generateHeader(){
 
-    $infos = [
-        'call' => '+01 123455678990',
-        'call_link' => 'tel:+12345678990',
-        'email' => 'demo@gmail.com',
-        'email_link' => 'mailto:demo@gmail.com',
-        'location' => 'https://www.google.com/maps/place/Mico+Hospital/@19.989798,73.7352341,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddec8145a77473:0xa4a7e9777c699000!8m2!3d19.989798!4d73.737809!16s%2Fg%2F1xg5r3xz?entry=ttu target="_blank" rel="noopener noreferrer"' ,
-    ];
+    
+
+    
+
+    
    
     echo '<header class="header_section">
     <div class="header_top">
       <div class="container">
-        <div class="contact_nav">
-          <a href="' . $infos['call_link'].'">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>
-            Call: ' . $infos['call'].'
-            </span>
-          </a>
-          <a href="' . $infos['email_link'].'">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <span>
-            Email: ' . $infos['email'].'
-            </span>
-          </a>
-          <a href="'. $infos['location'].'">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <span>
-              Location
-            </span>
-          </a>
-        </div>
+        <div class="contact_nav">';
+          generatesocial();
+    echo   '</div>
       </div>
     </div>
     <div class="header_bottom">
@@ -83,20 +126,9 @@ function generateHeader(){
             <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">';
             generateNavbar($GLOBALS['menuItems'], $GLOBALS['currentPage']);
            echo '</div>
-            <div class="quote_btn-container">
-              <a href="">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>
-                  Login
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span>
-                  Sign Up
-                </span>
-              </a>
-              <form class="form-inline">
+            <div class="quote_btn-container">';
+            generatereg();
+            echo  '<form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>
